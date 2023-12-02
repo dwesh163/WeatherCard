@@ -1,0 +1,26 @@
+* {
+    font-family: Helvetica, arial;
+    color: #fff;
+}
+
+section {
+    width: 500px;
+    background-color: rgb(38, 77, 183);
+    height: 200px;
+    border-radius: 1rem;
+    padding: 12px;
+}
+
+.temperature {
+    display: flex;
+}
+
+.temperatureText {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.temperatureCircle {
+    margin-top: 14px;
+    margin-left: 4px;
+}
