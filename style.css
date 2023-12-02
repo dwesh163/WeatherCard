@@ -11,6 +11,10 @@ section {
     padding: 12px;
 }
 
+.error {
+    background-color: rgb(36, 36, 36);
+}
+
 .temperature {
     display: flex;
 }
@@ -23,4 +27,27 @@ section {
 .temperatureCircle {
     margin-top: 14px;
     margin-left: 4px;
+}
+
+.loading {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.loadingBox {
+    height: 200px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.unavailableData{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    font-size: large;
+    font-variant: small-caps;
 }

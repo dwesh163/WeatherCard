@@ -6,24 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <section>
+    <section class="error">
+        <div class="loadingBox">
+            <img src="loading.svg" class="loading" alt="">
+            <span class="unavailableData">data not available</span>
+        </div>
         <div class="temperature">
-            <span class="temperatureText">27</span>
+            <span class="temperatureText"></span>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle temperatureCircle" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
               </svg>
         </div>
-        <span class="timeText">Tuesday, 23 December</span>
+        <span class="timeText"></span>
         <div style="display: flex;">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                 <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
               </svg>
-            <span class="locationText">Gonin Gora, Kad</span>
+            <span class="locationText"></span>
         </div>
     </section>
 </body>
-
+<script src="script.js"></script>
 </html>
