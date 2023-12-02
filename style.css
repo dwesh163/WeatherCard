@@ -1,91 +1,93 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
     font-family: Poppins, sans-serif;
     color: #fff;
     font-weight: 400;
 }
 
-section {
+.weatherSection {
     width: 500px;
     height: 170px;
     border-radius: 1rem;
     padding: 12px;
 }
 
-.sunny {
-    background: rgb(0,210,255);
-    background: linear-gradient(90deg, rgba(0,210,255,1) 0%, rgb(70, 133, 222) 100%); 
+.weatherSunny {
+    background: rgb(0, 210, 255);
+    background: linear-gradient(90deg, rgba(0, 210, 255, 1) 0%, rgb(70, 133, 222) 100%);
     opacity: 0.59;
 }
-.info {
+
+.weatherInfo {
     width: 150px;
 }
 
-.sunnySun {
+.weatherSunnySun {
     position: absolute;
     width: 11%;
     margin-left: 220px;
     margin-top: -12px;
 }
 
-.iconSun {
+.weatherIconSun {
     position: absolute;
-    margin-left: 405px;   
+    margin-left: 420px;
     margin-top: 21px;
     width: 70px;
 }
 
-.error {
+.weatherError {
     background-color: rgb(36, 36, 36);
 }
 
-.textBox {
+.weatherTextBox {
     margin-left: 20px;
-    margin-top: 50px;
+    margin-top: 45px;
     display: flex;
 }
 
-.infoBox {
+.weatherInfoBox {
     margin-left: 8px;
     margin-top: 45px;
-   letter-spacing: 1px;
+    letter-spacing: 1px;
 
 }
 
-.circle {
+.weatherCircle {
     margin-top: 22px;
 }
 
-.temperature {
+.weatherTemperature {
     display: flex;
 }
 
-.temperatureText {
+.weatherTemperatureText {
     font-size: 6rem;
     font-weight: 500;
 }
 
-.temperatureCircle {
+.weatherTemperatureCircle {
     margin-top: 21px;
     margin-left: 4px;
 }
 
-.locationTextBox {
-   margin-top: 10px;
+.weatherLocationTextBox {
+    margin-top: 10px;
 }
 
-.locationText {
+.weatherLocationText {
     margin-top: -3px;
- }
+}
 
 
-.loading {
+.weatherLoading {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-.loadingBox {
+.weatherLoadingBox {
     height: 168px;
     width: 500px;
     display: flex;
@@ -94,7 +96,7 @@ section {
     margin: 0;
 }
 
-.unavailableData{
+.weatherUnavailableData {
     max-width: 100%;
     height: auto;
     display: block;

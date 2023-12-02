@@ -5,45 +5,45 @@ const options = {
   };
 
 async function fetchAPI(api_key, city) {
-    $(".loadingBox").show()
-    $(".unavailableData").hide()
+    $(".weatherLoadingBox").show()
+    $(".weatherUnavailableData").hide()
     hideInfo()
 
     const url  = `http://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${city}`;
     const response = await fetch(url)
     if (!response.ok) {
-        $(".loading").hide()
-        $(".unavailableData").show()
+        $(".weatherLoading").hide()
+        $(".weatherUnavailableData").show()
         hideInfo()
         return
     }
     const data = await response.json();
 
-    $(".temperatureText").text(data["current"]["temp_c"])
-    $(".timeText").text(new Date().toLocaleDateString("en-us", options))
-    $(".locationText").text(data["location"]["name"] + ", " + data["location"]["country"])
+    $(".weatherTemperatureText").text(data["current"]["temp_c"])
+    $(".weatherTimeText").text(new Date().toLocaleDateString("en-us", options))
+    $(".weatherLocationText").text(data["location"]["name"] + ", " + data["location"]["country"])
 
-    $("section").removeClass("error");
-    $("section").addClass("sunny");
-    await $(".loadingBox").hide()
+    $(".weatherSection").removeClass("weatherError");
+    $(".weatherSection").addClass("weatherSunny");
+    await $(".weatherLoadingBox").hide()
     await showInfo()
 }
 
 const api_key = localStorage.getItem("WeatherCard")
 const city = "Chabrey";
 
-$(".loadingBox").hide()
+$(".weatherLoadingBox").hide()
 
 function hideInfo() {
-    $(".sunnySun").hide()
-    $(".iconSun").hide()
-    $(".textBox").hide()
+    $(".weatherSunnySun").hide()
+    $(".weatherIconSun").hide()
+    $(".weatherTextBox").hide()
 }
 
 function showInfo() {
-    $(".sunnySun").show()
-    $(".iconSun").show()
-    $(".textBox").show()
+    $(".weatherSunnySun").show()
+    $(".weatherIconSun").show()
+    $(".weatherTextBox").show()
 }
 
 
