@@ -4,6 +4,20 @@
     font-family: Poppins, sans-serif;
     color: #fff;
     font-weight: 400;
+    user-select: none;
+}
+
+body {
+    background-color: #333333;
+    height: 100%;
+    margin: 0;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .weatherSection {
@@ -11,12 +25,14 @@
     height: 170px;
     border-radius: 1rem;
     padding: 12px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .weatherSunny {
     background: rgb(0, 210, 255);
-    background: linear-gradient(90deg, rgba(0, 210, 255, 1) 0%, rgb(70, 133, 222) 100%);
-    opacity: 0.59;
+    background: linear-gradient(90deg, rgba(0, 210, 255, 1) 0%, rgb(89, 153, 243) 100%);
+    opacity: 1;
 }
 
 .weatherInfo {
@@ -102,4 +118,6 @@
     display: block;
     font-size: large;
     font-variant: small-caps;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
 }
