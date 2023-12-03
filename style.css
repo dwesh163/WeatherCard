@@ -22,35 +22,58 @@ main {
 
 .weatherSection {
     width: 500px;
-    height: 170px;
+    height: 167px;
     border-radius: 1rem;
     padding: 12px;
-    background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background-size: 101%;
 }
 
-.weatherSunny {
-    background: rgb(0, 210, 255);
-    background: linear-gradient(90deg, rgba(0, 210, 255, 1) 0%, rgb(89, 153, 243) 100%);
-    opacity: 1;
+.weather_Sunny {
+    background-image: url(svg/Sunny.svg);
 }
 
+.weather_Overcast {
+    background-image: url(svg/Overcast.svg);
+}
+
+.weather_Overcast_night {
+    background-image: url(svg/Overcast_night.svg);
+}
+
+.weather_Clear {
+    background-image: url(svg/Clear.svg);
+}
+
+.weather_Clear_night {
+    background-image: url(svg/Clear_night.svg);
+}
+
+.weather_Fog {
+    background-image: url(svg/Fog.svg);
+}
+
+.weather_Fog_night {
+    background-image: url(svg/Fog_night.svg);
+}
+
+.weather_Freezing_fog {
+    background-image: url(svg/Freezing_fog.svg);
+}
+
+.weather_Freezing_fog_night {
+    background-image: url(svg/Freezing_fog_night.svg);
+}
+
+.weather_Partly_cloudy {
+    background-image: url(svg/Partly_cloudy.svg);
+}
+
+.weather_Partly_cloudy_night {
+    background-image: url(svg/Partly_cloudy_night.svg);
+}
 .weatherInfo {
     width: 150px;
-}
-
-.weatherSunnySun {
-    position: absolute;
-    width: 210px;
-    margin-left: 220px;
-    margin-top: -12px;
-}
-
-.weatherIconSun {
-    position: absolute;
-    margin-left: 420px;
-    margin-top: 21px;
-    width: 70px;
 }
 
 .weatherError {
