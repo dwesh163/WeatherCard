@@ -24,7 +24,7 @@ async function fetchAPI(api_key, city, isReload) {
     let isNight = ""
 
     $(".weatherTemperatureText").text(data["current"]["temp_c"])
-    $(".weatherTimeText").text(new Date().toLocaleDateString("en-us", options))
+    $(".weatherIimeText").text(new Date().toLocaleDateString("en-us", options))
     $(".weatherLocationText").text(data["location"]["name"] + ", " + data["location"]["country"])
 
     if(data["current"]["is_day"] == 0){
