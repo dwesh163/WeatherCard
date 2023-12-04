@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>weatherCard</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-</head>
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+		<link rel="manifest" href="favicon/site.webmanifest" />
+		<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#333333" />
+		<meta name="msapplication-TileColor" content="#333333" />
+		<meta name="theme-color" content="#333333" />
+	</head>
 
-<body>
-    <main>
-        <section class="weatherSection weatherError">
-            <div class="weatherLoadingBox">
-                <img src="svg/loading.svg" class="weatherLoading" alt="">
-                <span class="weatherUnavailableData">data not available</span>
-            </div>
-            <div class="weatherTextBox">
-                <div class="weatherTemperature">
-                    <span class="weatherTemperatureText"></span>
-                    <svg class="weatherCircle" width="20" height="20" viewBox="0 0 32 32" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="15.9239" cy="15.8587" r="14.0356" stroke="white" stroke-width="4.0375" />
-                    </svg>
-
-                </div>
-                <div class="weatherInfoBox">
-                    <span class="weatherIimeText"></span>
-                    <div style="display: flex;" class="weatherLocationTextBox">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            style="margin-right: 6px;" class="weatherbi bi-geo-alt-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
-                        </svg>
-                        <span class="weatherLocationText"></span>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-    </main>
-</body>
-<script src="script.js"></script>
-
+	<body>
+		<main>
+			<section class="weatherSection weatherError">
+				<div class="weatherLoadingBox">
+					<img src="svg/loading.svg" class="weatherLoading" alt="" />
+					<span class="weatherUnavailableData">data not available</span>
+				</div>
+				<div class="weatherTextBox">
+					<div class="weatherTemperature">
+						<span class="weatherTemperatureText"></span>
+						<svg class="weatherCircle" width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="15.9239" cy="15.8587" r="14.0356" stroke="white" stroke-width="4.0375" />
+						</svg>
+					</div>
+					<div class="weatherInfoBox">
+						<span class="weatherIimeText"></span>
+						<div style="display: flex" class="weatherLocationTextBox">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="margin-right: 6px" class="weatherbi bi-geo-alt-fill" viewBox="0 0 16 16">
+								<path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+							</svg>
+							<span class="weatherLocationText"></span>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+	<script src="script.js"></script>
 </html>
