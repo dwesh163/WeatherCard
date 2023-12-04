@@ -1,68 +1,62 @@
 const options = {
-    weekday: 'long',
-    month: 'long',
-    day: 'numeric',
+	weekday: 'long',
+	month: 'long',
+	day: 'numeric',
 };
 
-async function fetchAPI(api_key, city, isReload) {
-    if(isReload){
-        $(".weatherLoadingBox").show()
-        $(".weatherUnavailableData").hide()
-        hideInfo()
-    }
-    
-    const url = `http://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${city}`;
-    const response = await fetch(url)
-    if (!response.ok) {
-        $(".weatherLoading").hide()
-        $(".weatherUnavailableData").show()
-        hideInfo()
-        return
-    }
-    const data = await response.json();
+async function fetchAPI(api_key, city) {
+	$('.weatherLoadingBox').show();
+	$('.weatherUnavailableData').hide();
+	hideInfo();
 
-    let isNight = ""
+	const url = `//api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${city}`;
+	const response = await fetch(url);
+	if (!response.ok) {
+		$('.weatherLoading').hide();
+		$('.weatherUnavailableData').show();
+		hideInfo();
+		return;
+	}
+	const data = await response.json();
 
-    $(".weatherTemperatureText").text(data["current"]["temp_c"])
-    $(".weatherIimeText").text(new Date().toLocaleDateString("en-us", options))
-    $(".weatherLocationText").text(data["location"]["name"] + ", " + data["location"]["country"])
+	let isNight = '';
 
-    if(data["current"]["is_day"] == 0){
-        isNight = "_night"
-    }
+	$('.weatherTemperatureText').text(data['current']['temp_c']);
+	$('.weatherIimeText').text(new Date().toLocaleDateString('en-us', options));
+	$('.weatherLocationText').text(data['location']['name'] + ', ' + data['location']['country']);
 
-    console.log(`weather_${data["current"]["condition"]["text"].replaceAll(" ", "_")}${isNight}`);
-    
-    $(".weatherSection").removeClass("weatherError");
-    $(".weatherSection").addClass(`weather_${data["current"]["condition"]["text"].replaceAll(" ", "_")}${isNight}`);
-    await $(".weatherLoadingBox").hide()
-    await showInfo()
+	if (data['current']['is_day'] == 0) {
+		isNight = '_night';
+	}
+
+	console.log(`weather_${data['current']['condition']['text'].replaceAll(' ', '_')}${isNight}`);
+
+	$('.weatherSection').removeClass('weatherError');
+	$('.weatherSection').addClass(`weather_${data['current']['condition']['text'].replaceAll(' ', '_')}${isNight}`);
+	await $('.weatherLoadingBox').hide();
+	await showInfo();
 }
 
-const api_key = localStorage.getItem("WeatherCard")
-const city = "paris";
+const api_key = localStorage.getItem('WeatherCard');
+const city = 'Renens';
 
-$(".weatherLoadingBox").hide()
+$('.weatherLoadingBox').hide();
 
 function hideInfo() {
-    $(".weatherIconSun").hide()
-    $(".weatherTextBox").hide()
+	$('.weatherIconSun').hide();
+	$('.weatherTextBox').hide();
 }
 
 function showInfo() {
-    $(".weatherIconSun").show()
-    $(".weatherTextBox").show()
+	$('.weatherIconSun').show();
+	$('.weatherTextBox').show();
 }
 
 setInterval(() => {
-    fetchAPI(api_key, city, false)
-
+	fetchAPI(api_key, city);
 }, 30000);
 
-fetchAPI(api_key, city, true)
+fetchAPI(api_key, city);
 
 //weather_Light_rain
 //weather_Moderate_rain_night
-
-
-
