@@ -60,7 +60,7 @@ $(document).ready(function () {
 	$('#cityInput').on('keydown', function (event) {
 		if (event.keyCode === 13) {
 			localStorage.setItem("WeatherCard", $('#cityInput').val())
-			location.reload()
+			fetchAPI(api_key, $('#cityInput').val());
 		}
 	});
 });
