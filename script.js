@@ -38,7 +38,7 @@ async function fetchAPI(api_key, city) {
 }
 
 const api_key = JSON.parse(localStorage.getItem('WeatherCard'))["key"];
-const city = JSON.parse(localStorage.getItem('WeatherCard'))["city"];;
+const city = JSON.parse(localStorage.getItem('WeatherCard'))["city"];
 
 $('.weatherLoadingBox').hide();
 
@@ -51,8 +51,6 @@ function showInfo() {
 	$('.weatherIconSun').show();
 	$('.weatherTextBox').show();
 }
-
-$("input")
 
 $(document).ready(function () {
 	$('#cityInput').on('keydown', function (event) {
