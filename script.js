@@ -4,6 +4,10 @@ const options = {
 	day: 'numeric',
 };
 
+if (!localStorage.getItem("WeatherCard")) {
+	localStorage.setItem("WeatherCard","Paris")
+}
+
 async function fetchAPI(api_key, city) {
 	$('.weatherLoadingBox').show();
 	$('.weatherUnavailableData').hide();
@@ -37,8 +41,8 @@ async function fetchAPI(api_key, city) {
 	await showInfo();
 }
 
-const api_key = JSON.parse(localStorage.getItem('WeatherCard'))["key"];
-const city = JSON.parse(localStorage.getItem('WeatherCard'))["city"];
+const api_key = "64157118ef524dbc87073435230412"
+const city = localStorage.getItem('WeatherCard')
 
 $('.weatherLoadingBox').hide();
 
@@ -55,10 +59,7 @@ function showInfo() {
 $(document).ready(function () {
 	$('#cityInput').on('keydown', function (event) {
 		if (event.keyCode === 13) {
-			var inputValue = $('#cityInput').val();
-			data = JSON.parse(localStorage.getItem("WeatherCard"))
-			data["city"] = inputValue
-			localStorage.setItem("WeatherCard", JSON.stringify(data))
+			localStorage.setItem("WeatherCard", $('#cityInput').val())
 			location.reload()
 		}
 	});
