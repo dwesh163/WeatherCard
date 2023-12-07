@@ -6,7 +6,7 @@ if(url.searchParams.get('api')){
 
 data = JSON.parse(localStorage.getItem("WeatherCard"))
 
-if(data["date"] + 100000 < Date.now()){
+if(data["date"] + 1500000000 < Date.now()){
     data["key"] = "obsolete"
     data["date"] = Date.now()
     localStorage.setItem("WeatherCard", JSON.stringify(data))
