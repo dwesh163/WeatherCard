@@ -38,7 +38,7 @@ async function fetchAPI(api_key, city) {
 }
 
 const api_key = JSON.parse(localStorage.getItem('WeatherCard'))["key"];
-const city = 'Renens';
+const city = JSON.parse(localStorage.getItem('WeatherCard'))["city"];;
 
 $('.weatherLoadingBox').hide();
 
@@ -52,6 +52,20 @@ function showInfo() {
 	$('.weatherTextBox').show();
 }
 
+$("input")
+
+$(document).ready(function () {
+	$('#cityInput').on('keydown', function (event) {
+		if (event.keyCode === 13) {
+			var inputValue = $('#cityInput').val();
+			data = JSON.parse(localStorage.getItem("WeatherCard"))
+			data["city"] = inputValue
+			localStorage.setItem("WeatherCard", JSON.stringify(data))
+			location.reload()
+		}
+	});
+});
+
 setInterval(() => {
 	fetchAPI(api_key, city);
 }, 90000);
@@ -60,3 +74,4 @@ fetchAPI(api_key, city);
 
 //weather_Light_rain
 //weather_Moderate_rain_night
+//weather_Mist
