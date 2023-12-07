@@ -37,7 +37,7 @@ async function fetchAPI(api_key, city) {
 	await showInfo();
 }
 
-const api_key = localStorage.getItem('WeatherCard');
+const api_key = JSON.parse(localStorage.getItem('WeatherCard'))["key"];
 const city = 'Renens';
 
 $('.weatherLoadingBox').hide();
@@ -54,7 +54,7 @@ function showInfo() {
 
 setInterval(() => {
 	fetchAPI(api_key, city);
-}, 30000);
+}, 90000);
 
 fetchAPI(api_key, city);
 
