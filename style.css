@@ -1,166 +1,121 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
-    font-family: Poppins, sans-serif;
-    color: #fff;
-    font-weight: 400;
-    user-select: none;
+	font-family: Poppins, sans-serif;
+	color: #fff;
+	font-weight: 400;
+	user-select: none;
 }
 
 body {
-    background-color: #333333;
-    height: 100%;
-    margin: 0;
+	background-color: #333333;
+	height: 100%;
+	margin: 0;
 }
 
 main {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 header {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    height: 15px;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	height: 15px;
 }
 
 input {
-    background-color: #2b2b2b;
-    border: #333333;
-    margin-left: 8px;
-    height: 20px;
-    margin-top: 3px;
+	background-color: #2b2b2b;
+	border: #333333;
+	margin-left: 8px;
+	height: 20px;
+	margin-top: 3px;
 }
 
 .input {
-    display: flex;
-    margin: 6px;
+	display: flex;
+	margin: 6px;
 }
 
 .weatherSection {
-    width: 500px;
-    height: 167px;
-    border-radius: 1rem;
-    padding: 12px;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    background-size: 101%;
+	width: 500px;
+	height: 167px;
+	border-radius: 1rem;
+	padding: 12px;
+	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+	background-size: 101%;
 }
 
-.weather_Sunny {
-    background-image: url(svg/Sunny.svg);
-}
-
-.weather_Overcast {
-    background-image: url(svg/Overcast.svg);
-}
-
-.weather_Overcast_night {
-    background-image: url(svg/Overcast_night.svg);
-}
-
-.weather_Clear {
-    background-image: url(svg/Clear.svg);
-}
-
-.weather_Clear_night {
-    background-image: url(svg/Clear_night.svg);
-}
-
-.weather_Fog {
-    background-image: url(svg/Fog.svg);
-}
-
-.weather_Fog_night {
-    background-image: url(svg/Fog_night.svg);
-}
-
-.weather_Freezing_fog {
-    background-image: url(svg/Freezing_fog.svg);
-}
-
-.weather_Freezing_fog_night {
-    background-image: url(svg/Freezing_fog_night.svg);
-}
-
-.weather_Partly_cloudy {
-    background-image: url(svg/Partly_cloudy.svg);
-}
-
-.weather_Partly_cloudy_night {
-    background-image: url(svg/Partly_cloudy_night.svg);
-}
 .weatherInfo {
-    width: 150px;
+	width: 150px;
 }
 
 .weatherError {
-    background-color: rgb(36, 36, 36);
+	background-color: rgb(36, 36, 36);
 }
 
 .weatherTextBox {
-    margin-left: 20px;
-    margin-top: 45px;
-    display: flex;
+	margin-left: 20px;
+	margin-top: 45px;
+	display: flex;
 }
 
 .weatherInfoBox {
-    margin-left: 8px;
-    margin-top: 45px;
-    letter-spacing: 1px;
-
+	margin-left: 8px;
+	margin-top: 45px;
+	letter-spacing: 1px;
 }
 
 .weatherCircle {
-    margin-top: 22px;
+	margin-top: 22px;
 }
 
 .weatherTemperature {
-    display: flex;
+	display: flex;
 }
 
 .weatherTemperatureText {
-    font-size: 6rem;
-    font-weight: 500;
+	font-size: 6rem;
+	font-weight: 500;
 }
 
 .weatherTemperatureCircle {
-    margin-top: 21px;
-    margin-left: 4px;
+	margin-top: 21px;
+	margin-left: 4px;
 }
 
 .weatherLocationTextBox {
-    margin-top: 10px;
+	margin-top: 10px;
 }
 
 .weatherLocationText {
-    margin-top: -3px;
+	margin-top: -3px;
 }
 
-
 .weatherLoading {
-    max-width: 100%;
-    height: auto;
-    display: block;
+	max-width: 100%;
+	height: auto;
+	display: block;
 }
 
 .weatherLoadingBox {
-    height: 168px;
-    width: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+	height: 168px;
+	width: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
 }
 
 .weatherUnavailableData {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    font-size: large;
-    font-variant: small-caps;
-    font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
+	max-width: 100%;
+	height: auto;
+	display: block;
+	font-size: large;
+	font-variant: small-caps;
+	font-weight: 600;
+	font-family: Arial, Helvetica, sans-serif;
 }

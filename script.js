@@ -4,8 +4,8 @@ const options = {
 	day: 'numeric',
 };
 
-if (!localStorage.getItem("WeatherCard")) {
-	localStorage.setItem("WeatherCard","Paris")
+if (!localStorage.getItem('WeatherCard')) {
+	localStorage.setItem('WeatherCard', 'Paris');
 }
 
 async function fetchAPI(api_key, city) {
@@ -36,13 +36,14 @@ async function fetchAPI(api_key, city) {
 	console.log(`weather_${data['current']['condition']['text'].replaceAll(' ', '_')}${isNight}`);
 
 	$('.weatherSection').removeClass('weatherError');
-	$('.weatherSection').addClass(`weather_${data['current']['condition']['text'].replaceAll(' ', '_')}${isNight}`);
+	$('.weatherSection').css('background-image', `url(svg/${data['current']['condition']['text'].replaceAll(' ', '_')}${isNight}.svg)`);
+
 	await $('.weatherLoadingBox').hide();
 	await showInfo();
 }
 
-const api_key = "64157118ef524dbc87073435230412"
-const city = localStorage.getItem('WeatherCard')
+const api_key = '64157118ef524dbc87073435230412';
+const city = localStorage.getItem('WeatherCard');
 
 $('.weatherLoadingBox').hide();
 
@@ -59,7 +60,7 @@ function showInfo() {
 $(document).ready(function () {
 	$('#cityInput').on('keydown', function (event) {
 		if (event.keyCode === 13) {
-			localStorage.setItem("WeatherCard", $('#cityInput').val())
+			localStorage.setItem('WeatherCard', $('#cityInput').val());
 			fetchAPI(api_key, $('#cityInput').val());
 		}
 	});
