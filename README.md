@@ -8,7 +8,7 @@ Welcome to [WeatherCard](https://dwesh163.github.io/WeatherCard/), a minimalist 
 -   Real-time temperature display.
 -   Background changes according to weather conditions.
 
-# Easy navigation:
+## Easy navigation:
 
 -   Use the left menu to switch between cities.
 
